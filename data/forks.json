@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "last_verified_utc": "2026-11-25T08:10:00Z",
+  "source_reference": "https://gtaleonida.net/project-leonida-github-status",
+  "summary": {
+    "playable_gameplay": false,
+    "shaders_translated": 26503,
+    "shaders_spirv_validated": 26503,
+    "shader_breakdown": {
+      "vertex": 2236,
+      "pixel": 12101,
+      "compute": 2689,
+      "mesh": 9282,
+      "geometry": 195
+    },
+    "primary_blocker": "No verified world frame yet; retail Xbox Series 1.0.2.1 copy must be user-supplied and already readable on disk."
+  },
+  "repositories": [
+    {
+      "full_name": "ItsNotRexed/Leonida",
+      "url": "https://github.com/ItsNotRexed/Leonida",
+      "role": "original",
+      "status": "unavailable_404",
+      "license": "GPL-3.0",
+      "stars": 25000,
+      "forks": null,
+      "latest_commit_sha": null,
+      "latest_commit_date_utc": null,
+      "notes": "Original repository launched Nov 20, 2026; went private/HTTP 404 on Nov 23-24, 2026. Mirror git.notrexed.dev returned HTTP 521."
+    },
+    {
+      "full_name": "ubiquitarianism/leonida",
+      "url": "https://github.com/ubiquitarianism/leonida",
+      "role": "active_primary_continuation",
+      "status": "active",
+      "license": "GPL-3.0",
+      "stars": 2038,
+      "forks": 445,
+      "open_issues": 1166,
+      "default_branch": "main",
+      "latest_commit_sha": "3f81d46",
+      "latest_commit_date_utc": "2026-11-25T07:04:22Z",
+      "latest_commit_message": "Merge pull request #1643 from ubiquitarianism/docs/readme-boot-status",
+      "notes": "Primary active GPLv3 continuation with full commit history. Boots through launch movie, first-run UI, and story load into world phase on Windows and Linux/Proton; no verified world frame yet."
+    },
+    {
+      "full_name": "ProjectLeonidaL/leonida",
+      "url": "https://github.com/ProjectLeonidaL/leonida",
+      "role": "active_continuation",
+      "status": "active",
+      "license": "GPL-3.0",
+      "stars": 415,
+      "forks": 47,
+      "open_issues": 2,
+      "default_branch": "main",
+      "latest_commit_sha": "6591ba9",
+      "latest_commit_date_utc": "2026-11-25T05:54:17Z",
+      "latest_commit_message": "Wine: fix root_sig and file_system in the shims, four test fixes",
+      "notes": "Project Leonida Legacy continuation. Includes Check-PC.bat and Install-Prerequisites.bat helper scripts and active Wine shim fixes."
+    },
+    {
+      "full_name": "IAmNotSiob/leonida-ce",
+      "url": "https://github.com/IAmNotSiob/leonida-ce",
+      "role": "active_community_edition",
+      "status": "active",
+      "license": "GPL-3.0",
+      "stars": 24,
+      "forks": 7,
+      "default_branch": "main",
+      "latest_commit_date_utc": "2026-11-25T02:39:22Z",
+      "notes": "Leonida CE (Community Edition), GPLv3 continuation."
+    },
+    {
+      "full_name": "ProjectLeonida/Leonida",
+      "url": "https://github.com/ProjectLeonida/Leonida",
+      "role": "former_mirror",
+      "status": "unavailable_404",
+      "license": null,
+      "stars": null,
+      "forks": null,
+      "latest_commit_sha": null,
+      "latest_commit_date_utc": null,
+      "notes": "Returned HTTP 404 when verified via GitHub API on 2026-11-25."
+    },
+    {
+      "full_name": "LeonidaReforge/Leonida",
+      "url": "https://github.com/LeonidaReforge/Leonida",
+      "role": "former_fork",
+      "status": "unavailable_404",
+      "license": null,
+      "stars": null,
+      "forks": null,
+      "latest_commit_sha": null,
+      "latest_commit_date_utc": null,
+      "notes": "Returned HTTP 404 when verified via GitHub API on 2026-11-25."
+    }
+  ]
+}

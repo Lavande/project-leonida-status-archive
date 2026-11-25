@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "last_verified_utc": "2026-11-25T08:10:00Z",
+  "build_guide_url": "https://gtaleonida.net/leonida-build-tutorial",
+  "spec_checker_url": "https://gtaleonida.net/can-i-run-leonida",
+  "gameplay_specs_confirmed": false,
+  "spec_rumor_note": "Viral claims citing Ryzen 5 5600X + RTX 3060 + 16 GB RAM or RTX 5070 for 60 FPS gameplay are unverified speculation; no playable gameplay benchmarks exist yet.",
+  "build_requirements": [
+    {
+      "component": "Operating System",
+      "requirement": "Windows 10/11 (64-bit) or Linux (64-bit with Proton for runtime)",
+      "mandatory": true
+    },
+    {
+      "component": "Disk Space",
+      "requirement": "~350 GB free SSD space (NVMe recommended)",
+      "mandatory": true
+    },
+    {
+      "component": "Python",
+      "requirement": "Python 3.12+ (standard library tools run with python -I)",
+      "mandatory": true
+    },
+    {
+      "component": ".NET SDK",
+      "requirement": ".NET 8 SDK",
+      "mandatory": true
+    },
+    {
+      "component": "Vulkan SDK",
+      "requirement": "LunarG Vulkan SDK (includes spirv-val for shader validation)",
+      "mandatory": true
+    },
+    {
+      "component": "LLVM",
+      "requirement": "LLVM with AMDGPU target (LLVM 23.1.x used in upstream shader translation runs)",
+      "mandatory": true
+    },
+    {
+      "component": "C++ Toolchain",
+      "requirement": "Visual Studio 2022 (Desktop development with C++) + CMake on Windows",
+      "mandatory": true
+    },
+    {
+      "component": "Git",
+      "requirement": "Git with submodule support (git clone --recursive / git submodule update --init)",
+      "mandatory": true
+    }
+  ]
+}

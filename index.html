@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Leonida Status Archive — GTA VI Static Recompilation Fork & IOC Tracker</title>
+  <meta name="description" content="Open-source status archive tracking Project Leonida (GTA VI Xbox Series to PC static recompilation) GPLv3 forks, confirmed malware IOCs, and build dependencies. Maintained with gtaleonida.net." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Project Leonida Status Archive",
+    "description": "Structured JSON and Markdown archive of Project Leonida GPLv3 forks, confirmed malware indicators (IOCs), and build dependencies for GTA VI static recompilation.",
+    "url": "https://lavande.github.io/project-leonida-status-archive/",
+    "isBasedOn": "https://gtaleonida.net/project-leonida-github-status",
+    "license": "https://opensource.org/licenses/MIT",
+    "dateModified": "2026-11-25"
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0b0e14;
+      --card: #131822;
+      --border: #232b3a;
+      --text: #e6edf3;
+      --muted: #93a1b5;
+      --accent: #ff5e8e;
+      --ok: #3fb950;
+      --warn: #d29922;
+      --bad: #f85149;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 36px 20px 64px; }
+    header { border-bottom: 1px solid var(--border); padding-bottom: 24px; margin-bottom: 28px; }
+    h1 { margin: 0 0 8px; font-size: 1.9rem; letter-spacing: -0.02em; }
+    h2 { margin: 36px 0 12px; font-size: 1.3rem; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    p { color: var(--muted); margin: 0 0 12px; }
+    a { color: #79c0ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .banner {
+      background: linear-gradient(135deg, rgba(255,94,142,0.12), rgba(121,192,255,0.08));
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-top: 16px;
+    }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .pill {
+      display: inline-block;
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      color: var(--text);
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin: 20px 0; }
+    .stat { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+    .stat .label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .stat .val { font-size: 1.35rem; font-weight: 700; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; font-size: 0.92rem; }
+    th, td { text-align: left; padding: 11px 13px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { background: #181f2c; color: var(--muted); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; }
+    tr:last-child td { border-bottom: none; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.78rem; font-weight: 600; }
+    .ok { background: rgba(63,185,80,0.16); color: var(--ok); }
+    .bad { background: rgba(248,81,73,0.16); color: var(--bad); }
+    .warn { background: rgba(210,153,34,0.16); color: var(--warn); }
+    code { background: #1c2333; padding: 2px 6px; border-radius: 5px; font-size: 0.86em; }
+    footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Project Leonida Status Archive</h1>
+      <p>Structured open-source tracker for <strong>Project Leonida</strong> (GTA VI Xbox Series → PC static recompilation): GPLv3 fork commits, malware IOCs, and local build dependencies.</p>
+      <div class="banner">
+        <strong>Maintained &amp; cross-referenced with <a href="https://gtaleonida.net/" rel="noopener">GTA Leonida (gtaleonida.net)</a></strong>
+        <div class="links">
+          <a class="pill" href="https://gtaleonida.net/project-leonida-github-status">GitHub Fork Status</a>
+          <a class="pill" href="https://gtaleonida.net/project-leonida-safe-download">Malware Alerts &amp; Safe Audit</a>
+          <a class="pill" href="https://gtaleonida.net/leonida-build-tutorial">Build Tutorial</a>
+          <a class="pill" href="https://gtaleonida.net/can-i-run-leonida">Can I Run Leonida? (PC Checker)</a>
+          <a class="pill" href="https://gtaleonida.net/gta-6-pc-port-tracker">GTA 6 PC Port Tracker</a>
+          <a class="pill" href="https://gtaleonida.net/gta-6-recomp-vs-emulation">Static Recomp Explained</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <div class="stat">
+        <div class="label">Playable Gameplay</div>
+        <div class="val" style="color: var(--bad);">No (Not Yet)</div>
+      </div>
+      <div class="stat">
+        <div class="label">Shaders Translated</div>
+        <div class="val" style="color: var(--ok);">26,503 / 26,503</div>
+      </div>
+      <div class="stat">
+        <div class="label">SPIR-V Validated</div>
+        <div class="val" style="color: var(--ok);">26,503 / 26,503</div>
+      </div>
+      <div class="stat">
+        <div class="label">Last Verified</div>
+        <div class="val" id="last-verified">2026-11-25</div>
+      </div>
+    </section>
+
+    <h2>1. Active &amp; Archived GPLv3 Forks</h2>
+    <p>Machine-readable JSON: <a href="data/forks.json"><code>data/forks.json</code></a> · Full analysis: <a href="https://gtaleonida.net/project-leonida-github-status">gtaleonida.net/project-leonida-github-status</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Repository</th>
+          <th>Status</th>
+          <th>Stars / Forks</th>
+          <th>Latest Commit (UTC)</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody id="forks-body">
+        <tr>
+          <td><a href="https://github.com/ubiquitarianism/leonida"><code>ubiquitarianism/leonida</code></a></td>
+          <td><span class="badge ok">Active (Primary)</span></td>
+          <td>2,038 / 445</td>
+          <td><code>3f81d46</code> (2026-11-25)</td>
+          <td>GPL-3.0 continuation with full history. Boots through story load into world phase; no world frame verified yet.</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/ProjectLeonidaL/leonida"><code>ProjectLeonidaL/leonida</code></a></td>
+          <td><span class="badge ok">Active</span></td>
+          <td>415 / 47</td>
+          <td><code>6591ba9</code> (2026-11-25)</td>
+          <td>Project Leonida Legacy continuation; includes <code>Check-PC.bat</code>, <code>Install-Prerequisites.bat</code>, Wine shim fixes.</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/IAmNotSiob/leonida-ce"><code>IAmNotSiob/leonida-ce</code></a></td>
+          <td><span class="badge ok">Active (CE)</span></td>
+          <td>24 / 7</td>
+          <td>2026-11-25</td>
+          <td>Leonida Community Edition (GPL-3.0).</td>
+        </tr>
+        <tr>
+          <td><code>ItsNotRexed/Leonida</code></td>
+          <td><span class="badge bad">404 / Private</span></td>
+          <td>~25,000+</td>
+          <td>Nov 23–24, 2026</td>
+          <td>Original repo went private/404; <code>git.notrexed.dev</code> returned HTTP 521.</td>
+        </tr>
+        <tr>
+          <td><code>ProjectLeonida/Leonida</code></td>
+          <td><span class="badge bad">404</span></td>
+          <td>—</td>
+          <td>—</td>
+          <td>Unavailable as of 2026-11-25.</td>
+        </tr>
+        <tr>
+          <td><code>LeonidaReforge/Leonida</code></td>
+          <td><span class="badge bad">404</span></td>
+          <td>—</td>
+          <td>—</td>
+          <td>Unavailable as of 2026-11-25.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>2. Confirmed Malware Indicators (IOCs)</h2>
+    <p>Machine-readable JSON: <a href="data/malware-iocs.json"><code>data/malware-iocs.json</code></a> · Full advisory: <a href="https://gtaleonida.net/project-leonida-safe-download">gtaleonida.net/project-leonida-safe-download</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Severity</th>
+          <th>Malware Pattern / Red Flag</th>
+          <th>Why It Is Malicious</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>IOC-001</code></td>
+          <td><span class="badge bad">Critical</span></td>
+          <td>Pre-compiled <code>.exe</code> / <code>.msi</code> installers</td>
+          <td>Legitimate forks ship raw GPLv3 source code only, with zero pre-compiled executables.</td>
+        </tr>
+        <tr>
+          <td><code>IOC-002</code></td>
+          <td><span class="badge bad">Critical</span></td>
+          <td>Password-protected archives (e.g. password <code>leonida</code>)</td>
+          <td>Infostealer evasion technique flagged by NordVPN and Malwarebytes advisories.</td>
+        </tr>
+        <tr>
+          <td><code>IOC-003</code></td>
+          <td><span class="badge warn">High</span></td>
+          <td>Fake "DOWNLOAD NOW" or "75% complete / 60 FPS" portals</td>
+          <td>No playable GTA 6 PC build exists yet; sites promising ready-to-play downloads are scams.</td>
+        </tr>
+        <tr>
+          <td><code>IOC-004</code></td>
+          <td><span class="badge warn">High</span></td>
+          <td>Tampered <code>Build.bat</code> or <code>.gitmodules</code></td>
+          <td>Always read build scripts and submodule URLs in plain text before running them.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Local Build Dependency Checklist</h2>
+    <p>Machine-readable JSON: <a href="data/build-dependencies.json"><code>data/build-dependencies.json</code></a> · Step-by-step tutorial: <a href="https://gtaleonida.net/leonida-build-tutorial">gtaleonida.net/leonida-build-tutorial</a> · PC Checker: <a href="https://gtaleonida.net/can-i-run-leonida">gtaleonida.net/can-i-run-leonida</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Requirement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Operating System</td><td>Windows 10/11 (64-bit) or Linux (64-bit, Proton for runtime)</td></tr>
+        <tr><td>Disk Space</td><td><strong>~350 GB free SSD space</strong> (NVMe recommended)</td></tr>
+        <tr><td>Python</td><td>Python 3.12+</td></tr>
+        <tr><td>.NET SDK</td><td>.NET 8 SDK</td></tr>
+        <tr><td>Vulkan SDK</td><td>LunarG Vulkan SDK (includes <code>spirv-val</code>)</td></tr>
+        <tr><td>LLVM</td><td>LLVM with <code>AMDGPU</code> target (LLVM 23.1.x tested upstream)</td></tr>
+        <tr><td>C++ Toolchain</td><td>Visual Studio 2022 (Desktop development with C++) + CMake</td></tr>
+      </tbody>
+    </table>
+
+    <footer>
+      <p>Documentation &amp; metadata only — zero copyrighted game files, keys, or executables. Cross-referenced with <a href="https://gtaleonida.net/">gtaleonida.net</a>. View source on <a href="https://github.com/Lavande/project-leonida-status-archive">GitHub</a>.</p>
+    </footer>
+  </div>
+</body>
+</html>

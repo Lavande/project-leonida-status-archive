@@ -1,0 +1,56 @@
+name: Refresh Fork Status Metadata
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update fork metrics via GitHub API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json, subprocess, datetime
+
+          with open("data/forks.json", "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          for repo in data["repositories"]:
+              name = repo["full_name"]
+              res = subprocess.run(
+                  ["gh", "api", f"repos/{name}"],
+                  capture_output=True, text=True
+              )
+              if res.returncode == 0:
+                  info = json.loads(res.stdout)
+                  repo["status"] = "archived" if info.get("archived") else "active"
+                  repo["stars"] = info.get("stargazers_count")
+                  repo["forks"] = info.get("forks_count")
+                  repo["open_issues"] = info.get("open_issues_count")
+                  repo["latest_commit_date_utc"] = info.get("pushed_at")
+              else:
+                  if repo["status"] == "active":
+                      repo["status"] = "unavailable_404"
+
+          data["last_verified_utc"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+          with open("data/forks.json", "w", encoding="utf-8", newline="\n") as f:
+              json.dump(data, f, indent=2)
+              f.write("\n")
+          PY
+      - name: Commit updated metadata if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet data/forks.json; then
+            git add data/forks.json
+            git commit -m "chore: refresh fork status metadata"
+            git push
+          fi
