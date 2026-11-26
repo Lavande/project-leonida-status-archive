@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_verified_utc": "2026-11-25T08:10:00Z",
+  "last_verified_utc": "2026-11-26T16:29:44Z",
   "source_reference": "https://gtaleonida.net/project-leonida-github-status",
   "summary": {
     "playable_gameplay": false,
@@ -34,12 +34,12 @@
       "role": "active_primary_continuation",
       "status": "active",
       "license": "GPL-3.0",
-      "stars": 2038,
-      "forks": 445,
-      "open_issues": 1166,
+      "stars": 2459,
+      "forks": 561,
+      "open_issues": 1547,
       "default_branch": "main",
       "latest_commit_sha": "3f81d46",
-      "latest_commit_date_utc": "2026-11-25T07:04:22Z",
+      "latest_commit_date_utc": "2026-11-26T16:29:15Z",
       "latest_commit_message": "Merge pull request #1643 from ubiquitarianism/docs/readme-boot-status",
       "notes": "Primary active GPLv3 continuation with full commit history. Boots through launch movie, first-run UI, and story load into world phase on Windows and Linux/Proton; no verified world frame yet."
     },
@@ -49,12 +49,12 @@
       "role": "active_continuation",
       "status": "active",
       "license": "GPL-3.0",
-      "stars": 415,
-      "forks": 47,
-      "open_issues": 2,
+      "stars": 491,
+      "forks": 65,
+      "open_issues": 4,
       "default_branch": "main",
       "latest_commit_sha": "6591ba9",
-      "latest_commit_date_utc": "2026-11-25T05:54:17Z",
+      "latest_commit_date_utc": "2026-11-26T16:22:11Z",
       "latest_commit_message": "Wine: fix root_sig and file_system in the shims, four test fixes",
       "notes": "Project Leonida Legacy continuation. Includes Check-PC.bat and Install-Prerequisites.bat helper scripts and active Wine shim fixes."
     },
@@ -64,11 +64,12 @@
       "role": "active_community_edition",
       "status": "active",
       "license": "GPL-3.0",
-      "stars": 24,
+      "stars": 26,
       "forks": 7,
       "default_branch": "main",
-      "latest_commit_date_utc": "2026-11-25T02:39:22Z",
-      "notes": "Leonida CE (Community Edition), GPLv3 continuation."
+      "latest_commit_date_utc": "2026-11-26T15:00:18Z",
+      "notes": "Leonida CE (Community Edition), GPLv3 continuation.",
+      "open_issues": 1
     },
     {
       "full_name": "ProjectLeonida/Leonida",
